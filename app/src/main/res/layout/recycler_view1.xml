@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin8"
+        android:layout_marginLeft="@dimen/margin8"
+        android:layout_marginRight="@dimen/margin8"
+        app:cardCornerRadius="@dimen/ten"
+        app:cardBackgroundColor="@android:color/transparent"
+      app:cardElevation="0dp"
+        app:contentPadding="0dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
+            android:layout_marginRight="@dimen/margin4"
+            android:layout_marginLeft="@dimen/margin4"
+            android:layout_marginTop="@dimen/margin4"
+            android:layout_marginBottom="@dimen/margin4">
+
+            <ImageView
+                android:id="@+id/img_3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/twohun"
+                android:src="@drawable/house1"
+                android:scaleType="centerCrop"/>
+
+    <org.mmtextview.components.MMTextView
+        android:id="@+id/tv_1"
+        android:layout_width="@dimen/nighty"
+        android:layout_height="@dimen/thirty"
+        android:layout_marginTop="@dimen/hundred4"
+        android:layout_marginLeft="@dimen/thirty"
+        android:text="@string/tv_cost1"
+        android:textSize="@dimen/twenty"
+        android:background="@drawable/rounded_corner"
+        android:textAlignment="center"/>
+
+
+
+    <ImageView
+        android:layout_below="@id/img_3"
+        android:id="@+id/img_4"
+        android:layout_width="@dimen/twenty"
+        android:layout_height="@dimen/twenty"
+        android:layout_marginTop="@dimen/ten"
+        android:layout_marginLeft="@dimen/twenty"
+        android:src="@drawable/ic_location_on_black_24dp"/>
+    <org.mmtextview.components.MMTextView
+        android:layout_below="@id/img_3"
+        android:id="@+id/tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ten"
+        android:layout_marginStart="@dimen/ten"
+        android:layout_toEndOf="@id/img_4"
+        android:text="@string/tv_west_minister_london"
+        android:fontFamily="sans-serif-medium"
+
+        android:textSize="@dimen/fiftee"
+        android:textColor="@color/gray"/>
+    <ImageView
+        android:layout_below="@id/img_4"
+        android:id="@+id/img_5"
+        android:layout_width="@dimen/twenty"
+        android:layout_height="@dimen/twenty"
+        android:layout_marginTop="@dimen/ten"
+        android:layout_marginLeft="@dimen/twenty"
+        android:src="@drawable/ic_zoom_out_map_black_24dp"/>
+    <org.mmtextview.components.MMTextView
+        android:id="@+id/tv_3"
+        android:layout_below="@id/tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ten"
+        android:layout_marginBottom="@dimen/ten"
+        android:layout_marginStart="@dimen/ten"
+        android:layout_toEndOf="@id/img_4"
+        android:text="@string/tv_3200sqft"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="@dimen/fiftee"
+        android:textColor="@color/gray"/>
+    <ImageView
+        android:layout_below="@id/img_3"
+        android:layout_toEndOf="@id/tv_2"
+        android:id="@+id/img_6"
+        android:layout_width="@dimen/twenty"
+        android:layout_height="@dimen/twenty"
+        android:layout_marginTop="@dimen/forty"
+        android:layout_marginStart="@dimen/twenty"
+        android:layout_marginLeft="@dimen/fiftee"
+        android:src="@drawable/ic_hotel_black_24dp"/>
+    <org.mmtextview.components.MMTextView
+        android:layout_below="@id/img_3"
+        android:id="@+id/tv_4"
+        android:layout_toEndOf="@id/img_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/forty"
+        android:layout_marginStart="@dimen/ten"
+        android:text="@string/tv_4_bedrooms"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="@dimen/fiftee"
+        android:textColor="@color/gray"/>
+
+        </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:elevation="-4dp"
+        android:padding="16dp"
+        android:backgroundTint="@color/colorWhite"
+        app:layout_anchor="@id/img_3"
+        android:src="@drawable/ic_near_me_black_24dp"
+        app:layout_anchorGravity="bottom|right"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

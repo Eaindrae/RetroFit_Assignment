@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Home_Rent_Application</string>
+    <string name="action_settings">Settings</string>
+    <string name="et_location_address">Type your location address</string>
+    <string name="tv_cost1">$1200</string>
+    <string name="tv_west_minister_london">West Minister London</string>
+    <string name="tv_4_bedrooms">4 bedrooms</string>
+    <string name="tv_3200sqft">3200sqft</string>
+    <string name="tv_up_to_12_000">Up to 12,000</string>
+    <string name="tv_marylebone_london">Marylebone London</string>
+    <string name="tv_2100sqft">2100sqft</string>
+    <string name="tv_3bedroom">3 bedrooms</string>
+    <string name="tv_12_0000">$12,0000</string>
+    <string name="tv_favorite">324 favorite</string>
+    <string name="tv_see_reviews">See Reviews</string>
+    <string name="lbl_ok">Ok</string>
+    <string name="detail_lbl">Browse Property For Rent In London.
+        Find Your Perfect Home With Zoopla. Use Our Property Search Tools to Refine,
+        Sort and Tailor Your Results in a Variety of Ways. No.1 For London Rental.
+        Types: Flats, Houses, Detached Houses, Semi-Detached Houses, Bungalows.</string>
+    <string name="tv_single_family_house">Single Family House</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_nav_address">Type your location address</string>
+</resources>

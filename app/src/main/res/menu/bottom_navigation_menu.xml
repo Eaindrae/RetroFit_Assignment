@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_foryou"
+        android:title="For You"
+         android:icon="@drawable/ic_adjust_black_24dp"/>
+    <item
+        android:id="@+id/ction_map"
+        android:title="Map"
+        android:icon="@drawable/ic_map"/>
+    <item
+        android:id="@+id/action_fab"
+        android:title="Favorite"
+        android:icon="@drawable/ic_favorite"/>
+    <item
+        android:id="@+id/action_nearme"
+        android:title="Explorer"
+        android:icon="@drawable/ic_explore"/>
+    <item
+        android:id="@+id/action_profile"
+        android:title="Profile"
+        android:icon="@drawable/ic_person_outline"/>
+</menu>

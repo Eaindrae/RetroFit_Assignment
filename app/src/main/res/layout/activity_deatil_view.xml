@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:src="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/img_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/house1" />
+
+
+        <ImageButton
+            android:id="@+id/img_btn_1"
+            android:layout_width="@dimen/forty"
+            android:layout_height="@dimen/forty"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="@dimen/ten"
+            android:layout_marginStart="@dimen/ten"
+            android:src="@drawable/ic_keyboard_arrow_left_black_24dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_toEndOf="@id/img_btn_1"
+            android:id="@+id/mc_2"
+            android:layout_width="300dp"
+            android:layout_height="@dimen/fifty"
+            android:layout_marginTop="@dimen/five"
+            android:layout_marginStart="@dimen/twenty"
+            app:cardUseCompatPadding="true"
+            src:cardCornerRadius="@dimen/fiftee"
+            app:strokeWidth="1dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_7"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/ic_search_black_24dp" />
+
+                <TextView
+                    android:id="@+id/tv_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="0dp"
+                    android:gravity="center"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/ten"
+                    android:text="Type your location address" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mat_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/twohun"
+            android:layout_marginStart="@dimen/twenty"
+            android:layout_marginEnd="@dimen/twenty"
+            src:cardCornerRadius="@dimen/twenty"
+            android:backgroundTint="@color/colorWhite">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tv_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/thirty"
+                    android:layout_marginTop="@dimen/fiftee"
+                    android:textSize="@dimen/twenty"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/tv_12_0000"/>
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab3"
+                    android:layout_width="@dimen/fifty"
+                    android:layout_height="@dimen/fifty"
+                    android:backgroundTint="@color/lightblue"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginEnd="@dimen/twenty"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_near_me_white_24dp" />
+
+                <ImageView
+                    android:layout_below="@id/tv_6"
+                    android:id="@+id/img_8"
+                    android:layout_width="@dimen/twenty"
+                    android:layout_height="@dimen/twenty"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginLeft="@dimen/twenty"
+                    android:src="@drawable/ic_location_on_black_24dp"/>
+                <TextView
+                    android:layout_below="@id/tv_6"
+                    android:layout_toEndOf="@id/img_8"
+                    android:id="@+id/tv_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginStart="@dimen/ten"
+                    android:text="@string/tv_marylebone_london"
+                    android:fontFamily="sans-serif-medium"
+
+                    android:textSize="@dimen/fiftee"
+                    android:textColor="@color/gray"/>
+                <ImageView
+                    android:id="@+id/img_9"
+                    android:layout_below="@id/img_8"
+                    android:layout_width="@dimen/twenty"
+                    android:layout_height="@dimen/twenty"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginLeft="@dimen/twenty"
+                    android:src="@drawable/ic_zoom_out_map_black_24dp"/>
+                <TextView
+                    android:id="@+id/tv_8"
+                    android:layout_below="@id/tv_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginStart="@dimen/ten"
+                    android:layout_toEndOf="@id/img_9"
+                    android:text="@string/tv_2100sqft"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="@dimen/fiftee"
+                    android:textColor="@color/gray"/>
+                <ImageView
+                    android:layout_toEndOf="@id/tv_8"
+                    android:layout_below="@id/tv_7"
+                    android:id="@+id/img_10"
+                    android:layout_width="@dimen/twenty"
+                    android:layout_height="@dimen/twenty"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginStart="@dimen/seventy"
+                    android:src="@drawable/ic_hotel_black_24dp"/>
+                <TextView
+                    android:id="@+id/tv_9"
+                    android:layout_toEndOf="@id/img_10"
+                    android:layout_below="@id/tv_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginStart="@dimen/ten"
+                    android:text="@string/tv_3bedroom"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="@dimen/fiftee"
+                    android:textColor="@color/gray"/>
+
+                <ImageView
+                    android:id="@+id/img_11"
+                    android:layout_below="@id/img_9"
+                    android:layout_width="@dimen/twenty"
+                    android:layout_height="@dimen/twenty"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginStart="@dimen/twenty"
+                    android:src="@drawable/ic_favorite_border_black_24dp"/>
+                <TextView
+                    android:id="@+id/tv_10"
+                    android:layout_toEndOf="@id/img_11"
+                    android:layout_below="@id/tv_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginStart="@dimen/ten"
+                    android:text="@string/tv_favorite"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="@dimen/fiftee"
+                    android:textColor="@color/gray"/>
+
+                <ImageView
+                    android:id="@+id/img_12"
+                    android:layout_toEndOf="@id/tv_10"
+                    android:layout_below="@id/tv_9"
+                    android:layout_width="@dimen/twenty"
+                    android:layout_height="@dimen/twenty"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginStart="@dimen/fifty"
+                    android:src="@drawable/ic_mode_edit_black_24dp"/>
+                <TextView
+                    android:id="@+id/tv_11"
+                    android:layout_toEndOf="@id/img_12"
+                    android:layout_below="@id/tv_9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginStart="@dimen/ten"
+                    android:text="23 reviews"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="@dimen/fiftee"
+                    android:textColor="@color/gray"/>
+
+                <ImageView
+                    android:id="@+id/img_13"
+                    android:layout_below="@id/tv_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line_shape"
+                    android:layout_margin="@dimen/ten"
+                    android:background="@android:color/transparent"/>
+
+                <TextView
+                    android:id="@+id/tv_12"
+                    android:layout_below="@id/img_13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty"
+                    android:layout_marginTop="@dimen/ten"
+                    android:text="@string/tv_see_reviews"/>
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:id="@+id/m_btn_1"
+                    android:layout_below="@id/img_13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/twenty"
+                    android:layout_alignParentRight="true"
+                    android:text="See Photos"
+                    android:textSize="@dimen/ten"
+                    android:fontFamily="sans-serif-medium"
+                    src:backgroundTint="@android:color/transparent"
+                    app:cornerRadius="20dp"
+                    app:rippleColor="#CFD8DC"
+                    app:strokeColor="@color/gray"
+                    app:strokeWidth="2dp"/>
+
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/m_btn_2"
+            android:layout_below="@id/mat_1"
+            android:layout_width="@dimen/hundred5"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/twenty"
+            android:layout_marginStart="@dimen/forty"
+            android:layout_marginTop="@dimen/twohun"
+            android:text="Add Favorite"
+            android:textSize="@dimen/fiftee"
+            android:fontFamily="sans-serif-medium"
+            android:textAlignment="center"
+            src:backgroundTint="@android:color/transparent"
+            android:backgroundTint="@color/colorWhite"
+            app:cornerRadius="20dp"
+            app:rippleColor="#CFD8DC"
+            app:strokeColor="@color/gray"
+            app:strokeWidth="2dp"/>
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/m_btn_3"
+            android:layout_below="@id/mat_1"
+            android:layout_toEndOf="@id/m_btn_2"
+            android:layout_width="@dimen/hundred"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/twenty"
+            android:layout_marginTop="@dimen/twohun"
+            android:layout_alignParentRight="true"
+            android:text="Book Now"
+            android:textSize="@dimen/fiftee"
+            android:fontFamily="sans-serif-medium"
+            src:backgroundTint="@android:color/transparent"
+            android:backgroundTint="@color/lightblue"
+            app:cornerRadius="20dp"
+            app:rippleColor="#CFD8DC"
+            app:strokeColor="@color/gray"
+            app:strokeWidth="2dp"/>
+   </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

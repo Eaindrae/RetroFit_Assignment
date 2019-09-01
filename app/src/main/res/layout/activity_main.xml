@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activites.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nighty"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:background="@color/themeColor"
+       >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mc_1"
+            android:layout_width="250dp"
+            android:layout_height="55dp"
+           android:layout_marginTop="@dimen/ten"
+            android:layout_marginStart="@dimen/ten"
+            android:layout_marginBottom="20dp"
+            app:cardUseCompatPadding="true"
+            app:strokeWidth="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerCrop"
+              android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+                android:src="@drawable/ic_search_black_24dp" />
+
+            <EditText
+                android:id="@+id/tv_1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="0dp"
+                android:gravity="center"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/ten"
+                android:text="Type your location address" />
+
+        </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+            <ImageView
+                android:layout_toEndOf="@id/mc_1"
+                android:id="@+id/img_1"
+                android:layout_width="@dimen/thirty"
+                android:layout_height="@dimen/twenty"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="@dimen/thirty"
+                android:src="@drawable/ic_view_agenda_black_24dp"/>
+            <ImageView
+                android:layout_toRightOf="@id/img_1"
+                android:id="@+id/img_2"
+                android:layout_width="@dimen/thirty"
+                android:layout_height="@dimen/forty"
+                android:layout_marginTop="@dimen/twenty"
+                android:src="@drawable/ic_view_column_black_24dp"/>
+            <ImageView
+                android:layout_toEndOf="@id/img_2"
+                android:layout_width="@dimen/thirty"
+                android:layout_height="@dimen/forty"
+                android:layout_marginTop="@dimen/twenty"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_edit_location_black_24dp"/>
+        </RelativeLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        android:backgroundTint="@color/themeColor"
+        >
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:fitsSystemWindows="true">
+
+        </com.google.android.material.tabs.TabLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_height"
+        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
+
+    </androidx.viewpager.widget.ViewPager>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_navigation_menu"
+            app:labelVisibilityMode="labeled"
+            android:backgroundTint="@color/themeColor"
+            app:itemTextColor="@color/gray"
+            app:itemIconTint="@color/bluegray"/>
+
+    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton-->
+        <!--android:id="@+id/fab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|end"-->
+        <!--android:layout_margin="@dimen/fab_margin"-->
+        <!--app:srcCompat="@android:drawable/ic_dialog_email" />-->
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
