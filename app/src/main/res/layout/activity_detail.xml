@@ -14,70 +14,80 @@
         android:layout_height="match_parent">
 
 
-        <ImageView
-            android:id="@+id/img_3"
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_marginTop="0dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/house2" />
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+            ​
 
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="256dp"
+                app:contentScrim="@android:color/white">
+                <!--​-->
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/house1" />
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/AppTheme.PopupOverlay"
+                    app:title="" />
+                ​
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:weightSum="10"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:id="@+id/layout_search"
+            android:gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:padding="@dimen/margin_medium">
 
         <ImageButton
-            android:id="@+id/img_btn_1"
-            android:layout_width="@dimen/forty"
-            android:layout_height="@dimen/forty"
-            android:layout_marginStart="@dimen/ten"
-            android:layout_marginTop="@dimen/ten"
-            android:background="@android:color/transparent"
+            android:id="@+id/img_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_weight="1"
+            android:layout_alignParentRight="true"
             android:src="@drawable/ic_keyboard_arrow_left_black_24dp" />
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/mc_2"
-            android:layout_width="300dp"
-            android:layout_height="@dimen/fifty"
-            android:layout_marginStart="@dimen/ten"
-            android:layout_marginTop="@dimen/five"
-            android:layout_toEndOf="@id/img_btn_1"
-            app:cardUseCompatPadding="true"
-            app:strokeWidth="1dp"
-            src:cardCornerRadius="@dimen/fiftee">
+            <EditText
+                android:id="@+id/et_location"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:background="@drawable/edit_text_design"
+                android:drawableStart="@drawable/ic_search_black_24dp"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="@string/tv_nav_address"
+                android:inputType="text"
+                android:paddingLeft="@dimen/margin_small"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_regular"
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                     />
 
-                <!--<ImageView-->
-                <!--android:id="@+id/img_7"-->
-                <!--android:layout_width="30dp"-->
-                <!--android:layout_height="30dp"-->
-                <!--android:layout_marginTop="5dp"-->
-                <!--android:scaleType="centerCrop"-->
-                <!--android:src="@drawable/ic_search_black_24dp" />-->
-
-                <EditText
-                    android:id="@+id/tv_5"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:background="@android:color/transparent"
-                    android:drawableStart="@drawable/ic_search_black_24dp"
-                    android:gravity="center"
-                    android:paddingStart="@dimen/ten"
-                    android:paddingEnd="@dimen/fifty"
-                    android:text="@string/tv_nav_address"
-                    android:textColor="@color/gray"
-                    android:textSize="@dimen/ten" />
-
-            </RelativeLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
+        </LinearLayout>
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/mat_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/twenty"
-            android:layout_marginTop="@dimen/twohun"
+            android:layout_marginTop="200dp"
             android:layout_marginEnd="@dimen/twenty"
             android:backgroundTint="@color/colorWhite"
             src:cardCornerRadius="@dimen/twenty">
@@ -86,8 +96,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/tv_6"
+                <org.mmtextview.components.MMTextView
+                    android:id="@+id/tv_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/thirty"
@@ -108,22 +118,22 @@
                     android:src="@drawable/ic_near_me_white_24dp" />
 
                 <ImageView
-                    android:id="@+id/img_8"
+                    android:id="@+id/img_location"
                     android:layout_width="@dimen/twenty"
                     android:layout_height="@dimen/twenty"
-                    android:layout_below="@id/tv_6"
+                    android:layout_below="@id/tv_price"
                     android:layout_marginLeft="@dimen/twenty"
                     android:layout_marginTop="@dimen/ten"
                     android:src="@drawable/ic_location_on_black_24dp" />
 
-                <TextView
-                    android:id="@+id/tv_7"
+                <org.mmtextview.components.MMTextView
+                    android:id="@+id/tv_location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_6"
+                    android:layout_below="@id/tv_price"
                     android:layout_marginStart="@dimen/ten"
                     android:layout_marginTop="@dimen/ten"
-                    android:layout_toEndOf="@id/img_8"
+                    android:layout_toEndOf="@id/img_location"
                     android:fontFamily="sans-serif-medium"
                     android:text="@string/tv_marylebone_london"
 
@@ -131,119 +141,110 @@
                     android:textSize="@dimen/fiftee" />
 
                 <ImageView
-                    android:id="@+id/img_9"
+                    android:id="@+id/img_sqft"
                     android:layout_width="@dimen/twenty"
                     android:layout_height="@dimen/twenty"
-                    android:layout_below="@id/img_8"
+                    android:layout_below="@id/img_location"
                     android:layout_marginLeft="@dimen/twenty"
                     android:layout_marginTop="@dimen/ten"
                     android:src="@drawable/ic_zoom_out_map_black_24dp" />
 
-                <TextView
-                    android:id="@+id/tv_8"
+                <org.mmtextview.components.MMTextView
+                    android:id="@+id/tv_sqft"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_7"
+                    android:layout_below="@id/tv_location"
                     android:layout_marginStart="@dimen/ten"
                     android:layout_marginTop="@dimen/ten"
-                    android:layout_toEndOf="@id/img_9"
+                    android:layout_toEndOf="@id/img_sqft"
                     android:fontFamily="sans-serif-medium"
                     android:text="@string/tv_2100sqft"
                     android:textColor="@color/gray"
                     android:textSize="@dimen/fiftee" />
 
                 <ImageView
-                    android:id="@+id/img_10"
+                    android:id="@+id/img_bed"
                     android:layout_width="@dimen/twenty"
                     android:layout_height="@dimen/twenty"
-                    android:layout_below="@id/tv_7"
+                    android:layout_below="@id/tv_location"
                     android:layout_marginStart="@dimen/seventy"
                     android:layout_marginTop="@dimen/ten"
-                    android:layout_toEndOf="@id/tv_8"
+                    android:layout_toEndOf="@id/tv_sqft"
                     android:src="@drawable/ic_hotel_black_24dp" />
 
-                <TextView
-                    android:id="@+id/tv_9"
+                <org.mmtextview.components.MMTextView
+                    android:id="@+id/tv_bed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_7"
+                    android:layout_below="@id/tv_location"
                     android:layout_marginStart="@dimen/ten"
                     android:layout_marginTop="@dimen/ten"
-                    android:layout_toEndOf="@id/img_10"
+                    android:layout_toEndOf="@id/img_bed"
                     android:fontFamily="sans-serif-medium"
                     android:text="@string/tv_3bedroom"
                     android:textColor="@color/gray"
                     android:textSize="@dimen/fiftee" />
 
                 <ImageView
-                    android:id="@+id/img_11"
+                    android:id="@+id/img_favorite"
                     android:layout_width="@dimen/twenty"
                     android:layout_height="@dimen/twenty"
-                    android:layout_below="@id/img_9"
+                    android:layout_below="@id/img_bed"
                     android:layout_marginStart="@dimen/twenty"
                     android:layout_marginTop="@dimen/ten"
                     android:src="@drawable/ic_favorite_border_black_24dp" />
 
-                <TextView
-                    android:id="@+id/tv_10"
+                <org.mmtextview.components.MMTextView
+                    android:id="@+id/tv_favorite"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_8"
+                    android:layout_below="@id/tv_sqft"
                     android:layout_marginStart="@dimen/ten"
                     android:layout_marginTop="@dimen/ten"
-                    android:layout_toEndOf="@id/img_11"
+                    android:layout_toEndOf="@id/img_favorite"
                     android:fontFamily="sans-serif-medium"
                     android:text="@string/tv_favorite"
                     android:textColor="@color/gray"
                     android:textSize="@dimen/fiftee" />
 
                 <ImageView
-                    android:id="@+id/img_12"
+                    android:id="@+id/img_review"
                     android:layout_width="@dimen/twenty"
                     android:layout_height="@dimen/twenty"
-                    android:layout_below="@id/tv_9"
+                    android:layout_below="@id/tv_bed"
                     android:layout_marginStart="@dimen/fifty"
                     android:layout_marginTop="@dimen/ten"
-                    android:layout_toEndOf="@id/tv_10"
+                    android:layout_toEndOf="@id/tv_favorite"
                     android:src="@drawable/ic_mode_edit_black_24dp" />
 
-                <TextView
-                    android:id="@+id/tv_11"
+                <org.mmtextview.components.MMTextView
+                    android:id="@+id/tv_review"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_9"
+                    android:layout_below="@id/tv_bed"
                     android:layout_marginStart="@dimen/ten"
                     android:layout_marginTop="@dimen/ten"
-                    android:layout_toEndOf="@id/img_12"
+                    android:layout_toEndOf="@id/img_review"
                     android:fontFamily="sans-serif-medium"
                     android:text="23 reviews"
                     android:textColor="@color/gray"
                     android:textSize="@dimen/fiftee" />
 
-                <!--<ImageView-->
-                    <!--android:id="@+id/img_13"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_below="@id/tv_11"-->
-                    <!--android:layout_margin="@dimen/ten"-->
-                    <!--android:background="@android:color/transparent"-->
-                    <!--android:src="@drawable/line_shape" />-->
-                <!---->
                 <View
-                    android:id="@+id/img_13"
+                    android:id="@+id/img_view_line"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_below="@id/tv_11"
+                    android:layout_below="@id/tv_review"
                     android:layout_marginTop="@dimen/ten"
                     android:alpha="0.2"
                     android:background="@android:color/darker_gray"
                     android:layout_margin="@dimen/ten"/>
 
-                <TextView
-                    android:id="@+id/tv_12"
+                <org.mmtextview.components.MMTextView
+                    android:id="@+id/tv_see_review"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/img_13"
+                    android:layout_below="@id/img_view_line"
                     android:layout_marginStart="@dimen/twenty"
                     android:layout_marginTop="@dimen/ten"
                     android:text="@string/tv_see_reviews" />
@@ -253,7 +254,7 @@
                     android:id="@+id/m_btn_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/img_13"
+                    android:layout_below="@id/img_view_line"
                     android:layout_alignParentRight="true"
                     android:layout_marginEnd="@dimen/twenty"
                     android:backgroundTint="@color/colorWhite"
@@ -269,8 +270,8 @@
             </RelativeLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <TextView
-            android:id="@+id/tv_13"
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tv_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/mat_1"
@@ -281,16 +282,16 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tv_14"
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tv_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_13"
+            android:layout_below="@id/tv_name"
             android:padding="@dimen/twenty"
             android:text="@string/detail_lbl"
             android:textSize="@dimen/twenty" />
 
-        <Button
+        <org.mmtextview.components.MMButton
 
             android:id="@+id/m_btn_2"
             android:layout_width="@dimen/hundred5"
@@ -309,7 +310,7 @@
             app:strokeColor="@color/gray"
             app:strokeWidth="2dp" />
 
-        <Button
+        <org.mmtextview.components.MMButton
 
             android:id="@+id/m_btn_3"
             android:layout_width="@dimen/hundred"

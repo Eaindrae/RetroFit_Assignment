@@ -25,14 +25,14 @@
             android:layout_marginBottom="@dimen/margin4">
 
             <ImageView
-                android:id="@+id/img_3"
+                android:id="@+id/img_house"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/house3"
                 android:scaleType="centerCrop"/>
 
             <TextView
-                android:id="@+id/tv_1"
+                android:id="@+id/tv_price"
                 android:layout_width="@dimen/nighty"
                 android:layout_height="@dimen/twenty"
                 android:layout_marginTop="@dimen/hundred"
@@ -52,7 +52,7 @@
                 android:src="@drawable/ic_near_me_black_24dp" />
 
             <androidx.cardview.widget.CardView
-                android:layout_below="@id/tv_1"
+                android:layout_below="@id/tv_price"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/seventy"
                 android:layout_marginTop="@dimen/ten"

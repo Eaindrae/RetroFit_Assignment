@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Home_Rent_Application</string>
     <string name="action_settings">Settings</string>
     <string name="et_location_address">Type your location address</string>
@@ -23,4 +23,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tv_nav_address">Type your location address</string>
+
+    <string name="square_feet_format"><xliff:g id="sqft">%1$d sqft</xliff:g></string>
+    <string name="price_format">$ ###,###</string>
 </resources>

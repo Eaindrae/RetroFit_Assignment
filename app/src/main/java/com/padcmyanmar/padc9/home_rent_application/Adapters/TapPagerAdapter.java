@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.padcmyanmar.padc9.home_rent_application.fragments.Top_Collection;
+import com.padcmyanmar.padc9.home_rent_application.fragments.Top_Collection_Fragment;
 
 public class TapPagerAdapter extends FragmentStatePagerAdapter {
 
@@ -15,11 +15,7 @@ public class TapPagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        if(position==0){
-            return new Top_Collection();
-        }else
-            return new Top_Collection();
-
+            return new Top_Collection_Fragment();
     }
 
     @Override

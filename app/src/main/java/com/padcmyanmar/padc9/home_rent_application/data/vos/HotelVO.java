@@ -9,6 +9,27 @@ public class HotelVO {
     @SerializedName("house_image_url")
     private String houseimageurl;
 
+    @SerializedName("name")
+    private String name;
+
+    @SerializedName("description")
+    private String description;
+
+    @SerializedName("price")
+    private long price;
+
+    @SerializedName("address")
+    private String address;
+
+    @SerializedName("square_feet")
+    private int square_feet;
+
+    @SerializedName("latitude")
+    private double lattitude;
+
+    @SerializedName("longitude")
+    private double longitude;
+
     public int getId() {
         return id;
     }
@@ -25,25 +46,6 @@ public class HotelVO {
         this.houseimageurl = houseimageurl;
     }
 
-    @SerializedName("name")
-    private String name;
-
-    @SerializedName("description")
-    private String description;
-
-    @SerializedName("price")
-    private long price;
-    @SerializedName("address")
-    private String address;
-
-    @SerializedName("square_feet")
-    private int square_feet;
-
-    @SerializedName("latitude")
-    private double lattitude;
-
-    @SerializedName("longitude")
-    private double longitude;
 
 
     public String getName() {

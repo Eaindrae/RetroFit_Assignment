@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.gms.maps.model.LatLng;
 import com.padcmyanmar.padc9.home_rent_application.Adapters.RecyclerViewAdapter;
 import com.padcmyanmar.padc9.home_rent_application.Delegate.EventItemDelegate;
 import com.padcmyanmar.padc9.home_rent_application.R;
@@ -67,9 +68,20 @@ public class Fragment_nearme extends Fragment implements EventItemDelegate {
     }
 
 
+
+
     @Override
-    public void onTap() {
+    public void onTap(int eventId) {
         startActivity(new Intent(this.getContext(), DetailsActivity.class));
     }
 
+    @Override
+    public void onGetHotelItems(Top_Collection_Fragment context, View view) {
+
+    }
+
+    @Override
+    public void onTabLocation(LatLng latLng) {
+
+    }
 }

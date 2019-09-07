@@ -1,128 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardview1"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin8"
-        android:layout_marginLeft="@dimen/margin8"
-        android:layout_marginRight="@dimen/margin8"
-        app:cardCornerRadius="@dimen/ten"
-        app:cardBackgroundColor="@android:color/transparent"
-      app:cardElevation="0dp"
-        app:contentPadding="0dp">
+
+<androidx.cardview.widget.CardView android:layout_width="match_parent"
+    android:layout_height="240dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:padding="http://schemas.android.com/tools"
+    android:backgroundTint="@color/color_shade"
+    android:layout_marginTop="@dimen/margin_medium_2"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    app:cardCornerRadius="@dimen/margin_small"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:id="@+id/app_bar">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_corner"
-            android:layout_marginRight="@dimen/margin4"
-            android:layout_marginLeft="@dimen/margin4"
-            android:layout_marginTop="@dimen/margin4"
-            android:layout_marginBottom="@dimen/margin4">
+            android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/img_3"
+                android:id="@+id/img_house"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/twohun"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+            <org.mmtextview.components.MMTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:src="@drawable/house1"
+                android:id="@+id/item_img"
                 android:scaleType="centerCrop"/>
 
-    <org.mmtextview.components.MMTextView
-        android:id="@+id/tv_1"
-        android:layout_width="@dimen/nighty"
-        android:layout_height="@dimen/thirty"
-        android:layout_marginTop="@dimen/hundred4"
-        android:layout_marginLeft="@dimen/thirty"
-        android:text="@string/tv_cost1"
-        android:textSize="@dimen/twenty"
-        android:background="@drawable/rounded_corner"
-        android:textAlignment="center"/>
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_regular"
+                android:id="@+id/lbl_price"
+                android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/margin_medium_2"
+                android:text="$ 12,000"/>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:padding="@dimen/margin_medium"
+        android:gravity="center_vertical">
 
     <ImageView
-        android:layout_below="@id/img_3"
         android:id="@+id/img_4"
-        android:layout_width="@dimen/twenty"
-        android:layout_height="@dimen/twenty"
-        android:layout_marginTop="@dimen/ten"
-        android:layout_marginLeft="@dimen/twenty"
+        android:layout_width="@dimen/item_ic_dimen"
+        android:layout_height="@dimen/item_ic_dimen"
+        android:padding="@dimen/margin_small"
         android:src="@drawable/ic_location_on_black_24dp"/>
     <org.mmtextview.components.MMTextView
-        android:layout_below="@id/img_3"
         android:id="@+id/tv_2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/ten"
-        android:layout_marginStart="@dimen/ten"
+        android:layout_height="@dimen/item_ic_dimen"
+        android:textSize="@dimen/text_regular"
+        android:textColor="@color/black"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/margin_medium"
         android:layout_toEndOf="@id/img_4"
         android:text="@string/tv_west_minister_london"
         android:fontFamily="sans-serif-medium"
-
-        android:textSize="@dimen/fiftee"
-        android:textColor="@color/gray"/>
+        />
     <ImageView
         android:layout_below="@id/img_4"
         android:id="@+id/img_5"
-        android:layout_width="@dimen/twenty"
-        android:layout_height="@dimen/twenty"
-        android:layout_marginTop="@dimen/ten"
-        android:layout_marginLeft="@dimen/twenty"
+        android:layout_width="@dimen/item_ic_dimen"
+        android:layout_height="@dimen/item_ic_dimen"
+        android:layout_marginTop="8dp"
+       android:padding="@dimen/margin_small"
         android:src="@drawable/ic_zoom_out_map_black_24dp"/>
     <org.mmtextview.components.MMTextView
         android:id="@+id/tv_3"
         android:layout_below="@id/tv_2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/ten"
-        android:layout_marginBottom="@dimen/ten"
-        android:layout_marginStart="@dimen/ten"
+        android:layout_height="@dimen/item_ic_dimen"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:gravity="center_vertical"
         android:layout_toEndOf="@id/img_4"
         android:text="@string/tv_3200sqft"
         android:fontFamily="sans-serif-medium"
-        android:textSize="@dimen/fiftee"
-        android:textColor="@color/gray"/>
+        android:textSize="@dimen/text_regular"
+        android:textColor="@color/black"/>
     <ImageView
-        android:layout_below="@id/img_3"
-        android:layout_toEndOf="@id/tv_2"
+        android:layout_toEndOf="@id/tv_3"
+        android:layout_below="@id/tv_2"
         android:id="@+id/img_6"
-        android:layout_width="@dimen/twenty"
-        android:layout_height="@dimen/twenty"
-        android:layout_marginTop="@dimen/forty"
-        android:layout_marginStart="@dimen/twenty"
-        android:layout_marginLeft="@dimen/fiftee"
+        android:layout_width="@dimen/item_ic_dimen"
+        android:layout_height="@dimen/item_ic_dimen"
+        android:padding="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_medium"
         android:src="@drawable/ic_hotel_black_24dp"/>
     <org.mmtextview.components.MMTextView
-        android:layout_below="@id/img_3"
         android:id="@+id/tv_4"
         android:layout_toEndOf="@id/img_6"
+        android:layout_below="@id/tv_2"
+        android:gravity="center_vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/forty"
-        android:layout_marginStart="@dimen/ten"
+        android:layout_height="@dimen/item_ic_dimen"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_medium"
         android:text="@string/tv_4_bedrooms"
         android:fontFamily="sans-serif-medium"
-        android:textSize="@dimen/fiftee"
-        android:textColor="@color/gray"/>
+        android:textSize="@dimen/text_regular"
+        android:textColor="@color/black"/>
 
         </RelativeLayout>
 
 
-</androidx.cardview.widget.CardView>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_margin="@dimen/fab_margin"
         android:elevation="-4dp"
         android:padding="16dp"
         android:backgroundTint="@color/colorWhite"
-        app:layout_anchor="@id/img_3"
+        app:layout_anchor="@id/img_house"
+        android:theme="@style/AppTheme.Light"
         android:src="@drawable/ic_near_me_black_24dp"
-        app:layout_anchorGravity="bottom|right"/>
+        app:layout_anchorGravity="bottom|end"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.cardview.widget.CardView>

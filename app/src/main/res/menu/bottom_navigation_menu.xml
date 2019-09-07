@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_foryou"
+        android:id="@+id/action_for_you"
+        android:enabled="true"
         android:title="For You"
+        app:showAsAction="ifRoom"
          android:icon="@drawable/ic_adjust_black_24dp"/>
     <item
-        android:id="@+id/ction_map"
+        android:id="@+id/action_find_me"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
         android:title="Map"
         android:icon="@drawable/ic_map"/>
     <item
-        android:id="@+id/action_fab"
+        android:id="@+id/action_favourite"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
         android:title="Favorite"
         android:icon="@drawable/ic_favorite"/>
     <item
-        android:id="@+id/action_nearme"
+        android:id="@+id/action_browse"
         android:title="Explorer"
         android:icon="@drawable/ic_explore"/>
     <item
         android:id="@+id/action_profile"
+        android:enabled="true"
         android:title="Profile"
+        app:showAsAction="ifRoom"
         android:icon="@drawable/ic_person_outline"/>
 </menu>
